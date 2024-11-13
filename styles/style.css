@@ -163,11 +163,11 @@ ol {
   overflow-y: auto;
   height: 298px;
   min-width: 400px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
   position: relative;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .content__details {
@@ -197,6 +197,7 @@ ol {
   block-size: 103px;
   object-fit: cover;
   object-position: center;
+  
 }
 
 .content__card-link {
@@ -226,16 +227,20 @@ ol {
   background-color: #545050;
 }
 
-.content__video-card-description-container{
+.content__video-card-description-container {
   display: flex;
   flex-direction: column;
-  gap: 6px
+  gap: 6px;
+  max-width: 170px;
 }
 .content__video-card-title {
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
